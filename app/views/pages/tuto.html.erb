@@ -1,0 +1,126 @@
+<div class="container">
+<%= image_tag ("devise.png"), class:"img-fluid", alt:"Responsive image" %>
+</div>
+<div class="container pt-4">
+    <h3><u>Créer une application Rails avec Devise</u></h3>
+
+    <p>Dans le terminal, créez une application rails version 5 avec une base postgresql en tapant la commande suivante :</p>
+    <img><%= image_tag ("tuto_1.png"), class:"img-fluid", alt:"Responsive image" %></img>
+
+    <p> Ajoutez la gem devise dans le Gemfile.</p>
+    <img><%= image_tag ("tuto_2.png"), class:"img-fluid", alt:"Responsive image" %></img>
+
+    <p>Lancez un Bundle Install dans votre terminal :</p>
+    <img><%= image_tag ("tuto_3.png"), class:"img-fluid", alt:"Responsive image" %></img>
+
+    <p>Créez la base de données :</p>
+    <img><%= image_tag ("tuto_4.png"), class:"img-fluid", alt:"Responsive image" %></img>
+
+    <p>Installez Devise à l'aide de cette commande :</p>
+    <img><%= image_tag ("tuto_5.png"), class:"img-fluid", alt:"Responsive image" %></img>
+
+    <p>Suivez les 4 points affichés dans le terminal :</p>
+    <img><%= image_tag ("tuto_6.png"), class:"img-fluid", alt:"Responsive image" %></img>
+
+    <p>Configurez l'Action Mailer dans config/development.rb :</p>
+    <img><%= image_tag ("tuto_7.png"), class:"img-fluid", alt:"Responsive image" %></img>
+
+    <p>Ajoutez le render dans app/views/layouts/application.html.erb et créer un fichier _flash.html.erb :</p>
+    <img><%= image_tag ("tuto_8.png"), class:"img-fluid", alt:"Responsive image" %></img>
+
+    <p>Configurez les flash messages dans app/views/layouts/_flash.html.erb :</p>
+    <img><%= image_tag ("tuto_9.png"), class:"img-fluid", alt:"Responsive image" %></img>
+
+    <p>Puis configurez les routes dans config/routes.rb :</p>
+    <img><%= image_tag ("tuto_10.png"), class:"img-fluid", alt:"Responsive image" %></img>
+
+    <p>Vous pouvez maintenant génerer les views :</p>
+    <img><%= image_tag ("tuto_11.png"), class:"img-fluid", alt:"Responsive image" %></img>
+
+    <p>Puis votre model User :</p>
+    <img><%= image_tag ("tuto_12.png"), class:"img-fluid", alt:"Responsive image" %></img>
+
+    <p>Voici le model généré que vous obtiendrez :</p>
+    <img><%= image_tag ("tuto_13.png"), class:"img-fluid", alt:"Responsive image" %></img>
+
+    <p>Effectuez la migration :</p>
+    <img><%= image_tag ("tuto_14.png"), class:"img-fluid", alt:"Responsive image" %></img>
+
+    <p>Ajoutez le render (cf. flash message) et créez un fichier _navbar.html.erb puis configurer les liens pour se connecter.</p>
+    <img><%= image_tag ("tuto_15.png"), class:"img-fluid", alt:"Responsive image" %></img>
+
+    <p>Lancez un serveur, puis rendez vous sur localhost:3000 :</p>
+    <img><%= image_tag ("tuto_16.png"), class:"img-fluid", alt:"Responsive image" %></img>
+
+    <p>Les formulaires de connexion sont déjà générés par devise avec un design simple, n'hésitez pas à les modifier pour les rendre plus agréables.</p>
+    <img><%= image_tag ("tuto_17.png"), class:"img-fluid", alt:"Responsive image" %></img>
+
+    <p>Pour configurer un controller avec un utilisateur authentifié, ajoutez simplement before_action  :authenticate_user !</p>
+    <p>Pour vérifier si un utilisateur est connecté, utilisez : user_signed_in ? </p>
+    <p>Enfin pour l'utilisateur actuellement connecté, utilisez : current_user </p>
+    <p>Pour plus d'informations, consultez la documentation sur : <%= link_to "Gem devise", "https://github.com/heartcombo/devise", target: "_blank", rel: "alternate" %></p>
+    
+  <br>  
+    <h3><u>Omniauth Google OAuth2</u></h3>
+
+    <p>Ajoutez les gem Omniauth, Omniauth-google-oauth2, Omniauth-rails_csrf_protection à votre Gemfile.</p>
+    <img><%= image_tag ("omni_1.png"), class:"img-fluid", alt:"Responsive image" %></img>
+
+    <p>Lancez un Bundle Install :</p>
+    <img><%= image_tag ("tuto_3.png"), class:"img-fluid", alt:"Responsive image" %></img>
+
+    <p>Configuez les identifiants dans config/intializer/devise.rb</p>
+    <img><%= image_tag ("omni_2.png"), class:"img-fluid", alt:"Responsive image" %></img>
+    
+    <p>Modifiez les routes dans config/routes.rb :</p>
+    <img><%= image_tag ("omni_3.png"), class:"img-fluid", alt:"Responsive image" %></img>
+    
+    <p>Modifiez le model dans apps/models/user.rb</p>
+    <img><%= image_tag ("omni_4.png"), class:"img-fluid", alt:"Responsive image" %></img>
+
+    <p>Créez un fichier callback dans omniauth_callbacks_controller.rb qui se trouve dans app/controllers/users :</p>
+    <img><%= image_tag ("omni_5.png"), class:"img-fluid", alt:"Responsive image" %></img>
+
+    <p>Créez le controller de registration dans app/controllers/registrations_controller.rb :</p>
+    <img><%= image_tag ("omni_6.png"), class:"img-fluid", alt:"Responsive image" %></img>
+
+    <p>Ajoutez la méthode dans apps/models/user/rb :</p>
+    <img><%= image_tag ("omni_7.png"), class:"img-fluid", alt:"Responsive image" %></img>
+
+    <p>Créez le lien pour vous connecter :</p>
+    <img><%= image_tag ("omni_8.png"), class:"img-fluid", alt:"Responsive image" %></img>
+
+    <p>Pour plus d'informations, retrouvez la documentation sur <%= link_to "Gem Omniauth", "https://github.com/zquestz/omniauth-google-oauth2", target: "_blank", rel: "alternate" %></p>
+
+    <h3><u>Créer une API sur Google Developer</u></h3>
+
+    <p>S'inscrire sur le site de Google Dev et créer une nouvelle application :</p>
+    <img><%= image_tag ("google_dev1.png"), class:"img-fluid", alt:"Responsive image" %></img>
+
+    <p>Ajoutez les uri de callback :</p>
+    <img><%= image_tag ("google_dev2.png"), class:"img-fluid", alt:"Responsive image" %></img>
+
+    <p>Mettez votre identifiant et votre clé dans le fichier : .env</p>
+    <img><%= image_tag ("google_dev3.png"), class:"img-fluid", alt:"Responsive image" %></img>
+
+    <p>Nous vous conseillons cette vidéo explicative, pour plus d'informations : <%= link_to "Ommiauth google video", "https://www.youtube.com/watch?v=9pD0uXLI5uE", target: "_blank", rel: "alternate" %></p>
+    
+    <br>
+    <h3><u>Sur cette application</u></h3>
+    <p>Vous pouvez cloner ce repo sur GitHub pour créer une application fonctionnelle en Rails 5, avec une base en Postgresql.</p>
+
+    <p>Elle dispose d'un mailer, de rspec pour tester vos models, de la possibilité d'avoir un compte admin, d'Omniauth (connexion avec Gmail) et d'un branchement Bootstrap.</p>
+    
+    <p>Les liens et la gem turbolinks ont été retirés. La gem mini racer peut poser problème, n'hésitez pas à l'ajouter ou la mettre en commentaire dans votre Gemfile.</p>
+    
+    <p><strong>=> Il ne vous reste plus qu'à régler vos adresses emails pour installer votre mailer, générer vos propres clés API et les enregistrer dans le fichier .env !</strong></p>
+    
+    <p>Attention n'oubliez pas d'ajouter le .env dans votre fichier .gitignore :) </p>
+
+    <p>Pour installer votre mailer vous pouvez suivre ce tutoriel : <%= link_to "Mailer", "https://medium.com/@ericschwartz7/rails-mailer-tutorial-82700f6737d9", target: "_blank", rel: "alternate" %></p>
+    <br>
+    <h3><u>Lien github</u></h3>
+    <p><%= link_to "Github", "https://github.com/Tepepeka/starter_pack_rails_5", target: "_blank", rel: "alternate" %></p>
+    <br>
+    <p><%= link_to "Back", root_path %></p>
+</div>
